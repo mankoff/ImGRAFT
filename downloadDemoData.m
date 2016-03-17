@@ -64,10 +64,11 @@ end
 fname=fullfile(path,'_temp.zip');
         
 if ~exist(testfile,'file')
-    s=urlread(url); %matlab's urlread/urlwrite does not comply with the "moved" header. Forced to do this hack... (Note this may be fragile)
-    url=regexpi(s,'href="([^\n"]+)"','once','tokens');
-    url=url{1};
+    ## s=urlread(url); %matlab's urlread/urlwrite does not comply with the "moved" header. Forced to do this hack... (Note this may be fragile)
+    ## url=regexpi(s,'href="([^\n"]+)"','once','tokens');
+    ## url=url{1};
     urlwrite(url,fname);
     unzip(fname,targetdir);
     delete(fname);
 end
+return

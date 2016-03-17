@@ -24,7 +24,7 @@ function h=alphawarp(x,y,c,alpha)
 % Nans? set to typical value, and give full transparency? otherwise matlab will treat them as zeros and mess with colorbars. -Or let user deal with it.
 x=extrappad(x);
 y=extrappad(y);
-
+c=extrappad(c);
 
 h=surface(x,y,zeros(size(x)),c,'EdgeColor','none','FaceColor','texturemap');
 if any(alpha(:)<1)

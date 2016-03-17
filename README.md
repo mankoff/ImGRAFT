@@ -1,5 +1,10 @@
 [![ImGRAFT](http://imgraft.glaciology.net/imgraftlogo.png)](http://imgraft.glaciology.net)
 
+## About This Version
+
+This version runs on Octave (the free open source MATLAB alternative). There were almost no code changes required. I had to add a few functions (files) that are in MATLAB but are not in the Octave core library.
+
+At the time of this writing, the code does not work on the latest Octave relase (4.0.0), but does work on the latest Octave built from source (4.1.0+). In addition, the `private` folder needs to be added to your search path: `path("./private",path());`
 
 ##An image georectification and feature tracking toolbox for MATLAB
 

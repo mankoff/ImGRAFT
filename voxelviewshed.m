@@ -85,8 +85,8 @@ for k=1:length(loopix)-1
     lp=lp([end 1:end 1]);
     yy=y(lp);  xx=x(lp);
     xx(1)=xx(1)-1;xx(end)=xx(end)+1;
-    vis(lp(2:end-1))=interp1q(voxx,voxy,xx(2:end-1))<yy(2:end-1);
-    voxy=max(voxy,interp1q(xx,yy,voxx));
+    vis(lp(2:end-1))=interp1(voxx,voxy,xx(2:end-1))<yy(2:end-1);
+    voxy=max(voxy,interp1(xx,yy,voxx));
 end
 vis=reshape(vis,sz);
 
